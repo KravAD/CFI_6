@@ -1,10 +1,10 @@
 package org.example;
 import UI.*;
-import javax.swing.*;
+
 
 public class Main {
     public static void main(String[] args) {
-         IU interfaz = new IU();
+         Interfaz interfaz = new Interfaz();
         interfaz.setVisible(true);
     }
 }

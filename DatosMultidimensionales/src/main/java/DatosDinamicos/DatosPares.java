@@ -20,4 +20,7 @@ public class DatosPares {
     public void eliminarPar(int indice) {
         this.pares.remove(indice);
     }
+    public void modificarPar(int indice, Pareja nuevoPar) {
+        this.pares.set(indice, nuevoPar);
+    }
 }

@@ -1,9 +1,8 @@
-// Main.java
 package org.example;
 
 import AnalisisOrganizacion.AnalisisRegistro;
 import AnalisisOrganizacion.Venta;
-import UI.Interfaz;
+import UI.*;
 import MapasDatos.*;
 
 import java.util.*;

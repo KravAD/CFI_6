@@ -19,7 +19,6 @@ public class Interfaz extends JFrame{
                 new VentanaDatosDinamicos().setVisible(true);
             }
         });
-
         JButton botonIndexarArchivos = new JButton("Indexar Archivos");
         botonIndexarArchivos.addActionListener(new ActionListener() {
             @Override

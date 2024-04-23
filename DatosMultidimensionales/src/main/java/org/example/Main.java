@@ -7,11 +7,18 @@ import UI.Interfaz;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
         Interfaz interfaz = new Interfaz();
         interfaz.setVisible(true);
+
+        // Algoritmo para ordenar nombres
+        TreeSet<String> nombres = new TreeSet<>();
+        nombres.add("Carlos");
+        nombres.add("Ana");
+        nombres.add("Felipe");
 
         List<Venta> ventas = new ArrayList<>();
 
@@ -21,7 +28,7 @@ public class Main {
         ventas.add(new Venta("Venta3", 150));
         ventas.add(new Venta("Venta4", 90));
 
-        // Ordenar las ventas 
+        // Ordenar las ventas
         List<Venta> ventasOrdenadas = AnalisisRegistro.ordenarVentas(ventas);
 
         // Filtrar las ventas
@@ -29,7 +36,7 @@ public class Main {
 
         System.out.println("\nVentas filtradas:");
         for (Venta venta : ventasFiltradas) {
-            System.out.println("ID: " + venta.getId() + ", Cantidad: " + venta.getCantidad());
+            System.out.println("Nombres: " + nombres + " ID: " + venta.getId() + ", Cantidad: " + venta.getCantidad());
         }
     }
 }

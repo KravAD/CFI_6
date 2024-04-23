@@ -1,35 +1,35 @@
+// Main.java
 package org.example;
-import UI.*;
 
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.TreeSet;
+import AnalisisOrganizacion.AnalisisRegistro;
+import AnalisisOrganizacion.Venta;
+import UI.Interfaz;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-         Interfaz interfaz = new Interfaz();
+        Interfaz interfaz = new Interfaz();
         interfaz.setVisible(true);
 
-        // Algoritmo para ordenar nombres
-        TreeSet<String> nombres = new TreeSet<>();
-        nombres.add("Carlos");
-        nombres.add("Ana");
-        nombres.add("Felipe");
+        List<Venta> ventas = new ArrayList<>();
 
-        for (String nombre : nombres) {
-            System.out.println(nombre);
-        }
+        // Añadir ventas a la lista
+        ventas.add(new Venta("Venta1", 120));
+        ventas.add(new Venta("Venta2", 200));
+        ventas.add(new Venta("Venta3", 150));
+        ventas.add(new Venta("Venta4", 90));
 
-        //Algoritmo para ordenar ventas
-        TreeMap<Integer, String> ventas = new TreeMap<>();
-        ventas.put(100, "Venta1");
-        ventas.put(200, "Venta2");
-        ventas.put(150, "Venta3");
-        ventas.put(50, "Venta4");
+        // Ordenar las ventas 
+        List<Venta> ventasOrdenadas = AnalisisRegistro.ordenarVentas(ventas);
 
-        for (Map.Entry<Integer, String> venta : ventas.entrySet()) {
-            System.out.println("Cantidad: " + venta.getKey() + ", Venta: " + venta.getValue());
+        // Filtrar las ventas
+        List<Venta> ventasFiltradas = AnalisisRegistro.filtrarVentas(ventas);
+
+        System.out.println("\nVentas filtradas:");
+        for (Venta venta : ventasFiltradas) {
+            System.out.println("ID: " + venta.getId() + ", Cantidad: " + venta.getCantidad());
         }
     }
 }

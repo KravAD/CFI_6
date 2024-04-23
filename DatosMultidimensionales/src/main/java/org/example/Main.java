@@ -4,7 +4,9 @@ package org.example;
 import AnalisisOrganizacion.AnalisisRegistro;
 import AnalisisOrganizacion.Venta;
 import UI.Interfaz;
+import MapasDatos.*;
 
+import java.util.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeSet;
@@ -38,5 +40,20 @@ public class Main {
         for (Venta venta : ventasFiltradas) {
             System.out.println("Nombres: " + nombres + " ID: " + venta.getId() + ", Cantidad: " + venta.getCantidad());
         }
+
+        //Converion a letra
+        Map<Integer, Character> numerosLetras = new HashMap<>();
+        Asociacion.asociarNumerosLetras(numerosLetras);
+
+        char letra = numerosLetras.get(2);
+        System.out.println("La letra asociada al número 2 es: " + letra);
+
+        //Conversion a texto
+        Map<Integer, String> numerosTextuales = new HashMap<>();
+        Asociacion.asociarNumerosTextuales(numerosTextuales);
+
+        String texto = numerosTextuales.get(3);
+        System.out.println("La representación textual del número 3 es: " + texto);
+
     }
 }

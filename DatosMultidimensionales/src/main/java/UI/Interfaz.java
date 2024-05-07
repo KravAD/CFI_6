@@ -1,6 +1,7 @@
 package UI;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -19,6 +20,9 @@ public class Interfaz extends JFrame {
         JPanel panel = new JPanel();
 
         JButton botonDatosDinamicos = new JButton("Datos Dinámicos");
+        botonDatosDinamicos.setFont(new Font("Arial", Font.BOLD, 14));
+        botonDatosDinamicos.setBackground(Color.BLUE);
+        botonDatosDinamicos.setForeground(Color.WHITE);
         botonDatosDinamicos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -26,7 +30,11 @@ public class Interfaz extends JFrame {
             }
         });
 
+
         JButton botonIndexarArchivos = new JButton("Indexar Archivos");
+        botonIndexarArchivos.setFont(new Font("Arial", Font.BOLD, 14));
+        botonIndexarArchivos.setBackground(Color.BLUE);
+        botonIndexarArchivos.setForeground(Color.WHITE);
         botonIndexarArchivos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -49,6 +57,9 @@ public class Interfaz extends JFrame {
         });
 
         JButton botonRutasGuardadas = new JButton("Rutas Guardadas");
+        botonRutasGuardadas.setFont(new Font("Arial", Font.BOLD, 14));
+        botonRutasGuardadas.setBackground(Color.BLUE);
+        botonRutasGuardadas.setForeground(Color.WHITE);
         botonRutasGuardadas.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
